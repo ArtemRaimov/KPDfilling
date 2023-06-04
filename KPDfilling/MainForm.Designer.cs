@@ -803,6 +803,7 @@
             academichoursTB.Name = "academichoursTB";
             academichoursTB.Size = new Size(52, 27);
             academichoursTB.TabIndex = 63;
+            academichoursTB.TextChanged += academichoursTB_TextChanged;
             academichoursTB.KeyPress += hoursTextBox_KeyPress;
             // 
             // zeTB

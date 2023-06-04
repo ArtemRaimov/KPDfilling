@@ -1066,8 +1066,8 @@ namespace KPDfilling
 
         private void îòêðûòüÂWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
             wordDoc.Visible = true;
+            this.WindowState = FormWindowState.Minimized;
             îòêðûòüÂWordToolStripMenuItem.Enabled = false;
         }
 
@@ -1131,6 +1131,25 @@ namespace KPDfilling
         private void textBox_MouseLeave(object sender, EventArgs e)
         {
             toolTip1.Hide(this);
+        }
+
+        private void academichoursTB_TextChanged(object sender, EventArgs e)
+        {
+            if (academichoursTB.Text != "")
+            {
+                if (Convert.ToInt32(academichoursTB.Text) <= 36)
+                    zeTB.Text = "1";
+                else if (Convert.ToInt32(academichoursTB.Text) <= 72)
+                    zeTB.Text = "2";
+                else if (Convert.ToInt32(academichoursTB.Text) <= 108)
+                    zeTB.Text = "3";
+                else if (Convert.ToInt32(academichoursTB.Text) <= 144)
+                    zeTB.Text = "4";
+                else if (Convert.ToInt32(academichoursTB.Text) <= 180)
+                    zeTB.Text = "5";
+                else if (Convert.ToInt32(academichoursTB.Text) <= 216)
+                    zeTB.Text = "6";
+            }
         }
     }
 }
